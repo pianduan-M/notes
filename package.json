@@ -1,0 +1,42 @@
+{
+  "name": "pd-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/eslint-parser": "^7.21.3",
+    "@commitlint/config-conventional": "^17.6.1",
+    "commitizen": "^4.3.0",
+    "commitlint": "^17.6.1",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.38.0",
+    "eslint-config-alloy": "^4.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue,css,scss}": [
+      "prettier --write .",
+      "eslint  --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}
